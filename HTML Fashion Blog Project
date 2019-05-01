@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Everyday with Isa </title>
+      <body>
+        <a href="#contact"> <img src="https://s3.amazonaws.com/codecademy-content/courses/learn-html/elements-and-structure/profile.jpg"/> </a>
+      	  <h3>by Isabelle Rodriguez | 1 day ago</h3>
+        
+      <h1> An Insider's Guide to NYFW </h1>
+       <img src="https://s3.amazonaws.com/codecademy-content/courses/learn-html/elements-and-structure/image-one.jpeg"/>
+      	  <p><a href="https://en.wikipedia.org/wiki/New_York_Fashion_Week." target="_blank" >NYFW </a>can be both amazingly fun & incredibly overwhelming, especially if youve never been. Luckily, Im here to give you an insiders guide and make your first show a pleasurable experience. By taking my tips and tricks, and following your gut, youll have an unforgettable experience!</p>
+      
+      <h2> Getting Tickets & Picking the Shows </h2>
+        <img src="https://s3.amazonaws.com/codecademy-content/courses/learn-html/elements-and-structure/image-two.jpeg"/>
+        	<p>If youre lucky or connected you can get an invite, sans the price tag. But I wasnt so lucky or connected my first 2 years so Im here to help you out. First, plan out which shows are most important to you and make a schedule and this is a biggie: SET A BUDGET. If youre worrying about blowing your cash the whole time you wont have fun. Then check out prices, days, and times and prioritize the designers you want to see most. Lastly, purchase your tickets and get excited!</p>
+      
+      <h2> Dressing for the Shows </h2>
+        <img src="https://s3.amazonaws.com/codecademy-content/courses/learn-html/elements-and-structure/image-three.jpeg"/>
+          <p>Always be true to your own sense of style, if you dont youll be uncomfortable the whole time and it will show. Remember, NYFW is about expressing yourself and taking in what the designers have chosen to express through their new lines. Also its important to wear shoes youll be comfortable in all day. Obviously you want to look good, but youll be on your feet all day long, so be prepared.</p>
+      
+      <h4> Related Content </h4>
+      		<ul>
+            <li>How To Style Boyfriend Jeans</li>
+						<li>When Print Is Too Much</li>
+						<li>The Overalls Trend</li>
+						<li>Falls It Color: Blush</li>
+          </ul>
+      
+      <div id="contact">
+        <p> <strong>email:</strong> isa@fashionblog.com | <strong>phone:</strong> 917-555-1098 | <strong>address:</strong> 371 284th St, New York, NY, 10001</p>
+       </div>
+    
+    </body>
+  </head>
+</html>
