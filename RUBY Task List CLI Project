@@ -1,0 +1,82 @@
+#CLI Task List Project 
+#Codecademy Project --> by Alyssa Yeşilyurt 
+
+require 'pry'
+
+module Menu 
+
+    def menu 
+        " Welcome to the Task Manager Program!
+      This menu will help you use the Task List System
+      1) Add
+      2) Show 
+      3) Write to a File
+      Q) Quit "
+    end 
+
+    def show 
+        menu 
+    end 
+end 
+# ^^Displays Menu Options
+
+module PromptUser  #referred to as Promptable in tutorial
+
+    def prompt(message = 'What would you like to do?' , symbol = ':> ')
+        print method 
+        print symbol 
+        gets.chomp
+    end 
+end 
+# ^^Prompts user for input and gets their input 
+
+class List 
+
+    attr_reader :all_tasks
+
+    def initialize
+       @all_tasks = [ ]
+    end 
+
+    def add(task)
+        all_tasks << task 
+    end 
+
+    def show 
+        all_tasks
+    end 
+end 
+# ^^ Initializes the class by adding a task to the list and then provides a way to display all tasks
+
+
+class Task
+
+    attr_reader :description
+
+    def initialize(description)
+        @description = description
+    end 
+end 
+# ^^ Initializes a task with a description
+
+
+if __FILE__ == $PROGRAM_NAME
+    include Menu
+    include PromptUser
+    ml = List.new
+    puts 'Please choose from the following list'
+    until ['q'].include?(user_input = prompt(show).downcase)
+      case user_input
+      when '1'
+        ml.add(Task.new(prompt('What is the task you would like to accomplish?')))
+      when '2'
+        puts ml.show
+      else
+        puts 'Try again, I did not understand.'
+      end
+    end
+    puts 'Outro - Thanks for using our awesome menuing system!'
+  end
+   
+
+# ^^ Tests your program 
