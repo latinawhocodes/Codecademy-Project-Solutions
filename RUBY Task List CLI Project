@@ -1,82 +1,89 @@
-#CLI Task List Project 
-#Codecademy Project --> by Alyssa Yeşilyurt 
+# ^^ Codecademy Task List CLI Project 
+# By: Alyssa Yeşilyurt 
 
-require 'pry'
 
-module Menu 
-
-    def menu 
-        " Welcome to the Task Manager Program!
+module Menu
+    def menu
+      " Welcome to the Task Manager Program!
       This menu will help you use the Task List System
       1) Add
-      2) Show 
-      3) Write to a File
+      2) Show
+      3) Write to File
       Q) Quit "
-    end 
+    end
 
-    def show 
-        menu 
-    end 
-end 
-# ^^Displays Menu Options
+    def show
+      menu
+    end
+  end
+  # ^^ Display Menu
 
-module PromptUser  #referred to as Promptable in tutorial
 
-    def prompt(message = 'What would you like to do?' , symbol = ':> ')
-        print method 
-        print symbol 
-        gets.chomp
-    end 
-end 
-# ^^Prompts user for input and gets their input 
+  module PromptUser
+    def prompt(message = "What would you like to do?", symbol = ':> ')
+      print message
+      print symbol
+      gets.chomp
+    end
+  end
+# ^^ Prompts user and gets their input 
 
-class List 
-
+  class List
     attr_reader :all_tasks
 
     def initialize
-       @all_tasks = [ ]
-    end 
+      @all_tasks = []
+    end
 
     def add(task)
-        all_tasks << task 
-    end 
+      all_tasks << task
+    end
 
-    def show 
-        all_tasks
-    end 
-end 
-# ^^ Initializes the class by adding a task to the list and then provides a way to display all tasks
+    def show
+      all_tasks
+    end
+
+    def write_to_file(filename)
+      IO.write(filename, @all_tasks.map(&:to_s).join("\n"))
+    end
+  end
+# ^^ Initializes the class by adding a task to the list and then provides a way to display all tasks. It also allows you to write items to a file.
 
 
-class Task
-
+  class Task
     attr_reader :description
 
     def initialize(description)
-        @description = description
-    end 
-end 
-# ^^ Initializes a task with a description
-
-
-if __FILE__ == $PROGRAM_NAME
-    include Menu
-    include PromptUser
-    ml = List.new
-    puts 'Please choose from the following list'
-    until ['q'].include?(user_input = prompt(show).downcase)
-      case user_input
-      when '1'
-        ml.add(Task.new(prompt('What is the task you would like to accomplish?')))
-      when '2'
-        puts ml.show
-      else
-        puts 'Try again, I did not understand.'
-      end
+      @description = description
     end
-    puts 'Outro - Thanks for using our awesome menuing system!'
-  end
-   
 
-# ^^ Tests your program 
+    def to_s
+      description
+    end
+  end
+  # ^^ Initialize a task with a description
+
+  if __FILE__ == $PROGRAM_NAME
+  include Menu
+  include PromptUser
+    my_list = List.new
+    puts 'Please choose from the following list'
+      until ['q'].include?(user_input = prompt(show).downcase)
+        case user_input
+          when '1'
+           my_list.add(Task.new(prompt('What is the task you would 
+           like to accomplish?')))
+          when '2'
+            puts my_list.show
+          when '3'
+            my_list.write_to_file(prompt('What is the filename 
+            to write to?'))
+          else
+            puts 'Try again, I did not understand.'
+        end
+          prompt('Press enter to continue', '')
+      end
+      puts 'Outro - Thanks for using the menu system!'
+  end
+      
+  # ^^ Test your program!
