@@ -7,6 +7,10 @@ int main(){
     std::cout <<  "  A     A    \n";
     std::cout <<  " A       A   \n";
 
+    std::cout << "\n";
+    std::cout << "\n";
+    std::cout << "\n";
+
     std::cout <<  "  Y      Y   \n";
     std::cout <<  "    Y   Y    \n";
     std::cout <<  "      Y      \n";
