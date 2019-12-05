@@ -8,18 +8,21 @@ int main(){
     int ravenclaw  = 0;
     int hufflepuff = 0;
 
-    int answer1, answer2, answer3, answer4;
+    int answer1, answer2, answer3, answer4, answer5;
 
-    std::cout << "A thousand years or more ago\n, When I was newly sewn \n, There lived four wizards of renown\n, Whose names are still well-known...\n";
+    std::cout << "A thousand years or more ago, \n";
+    std::cout << "When I was newly sewn, \n";
+    std::cout << "There lived four wizards of renown, \n";
+    std::cout << "Whose names are still well-known...\n";
 
     std::cout << "Welcome to the Sorting Hat Quiz!\n";
 
     //Question 1
-    std::cout << "1. When I die, I want people to remember me as:
-        \n  1. The Good
-        \n  2. The Great
-        \n  3. The Wise
-        \n  4. The Bold \n";
+    std::cout << "QUESTION 1: When I die, I want people to remember me as: \n";
+    std::cout << " 1. The Good \n";
+    std::cout << " 2. The Great \n";
+    std::cout << " 3. The Wise \n";
+    std::cout << " 4. The Bold \n";
     std::cin >> answer1;
 
     switch(answer1){
@@ -41,9 +44,9 @@ int main(){
     }
 
     //Question 2
-    std::cout << "2. Do you prefer Dawn or Dusk?
-        \n  1. Dawn
-        \n  2. Dusk \n";
+    std::cout << "QUESTION 2: Do you prefer Dawn or Dusk?\n";
+    std::cout << " 1. Dawn \n";
+    std::cout << " 2. Dusk \n";
     std::cin >> answer2;
 
     if (answer2 == 1){
@@ -59,11 +62,11 @@ int main(){
     }
 
     //Question 3
-    std::cout << "3. What is your favorite instrument?
-        \n  1. The violin
-        \n  2. The trumpet
-        \n  3. The piano
-        \n  4. The drums \n";
+    std::cout << "QUESTION 3: What is your favorite instrument? \n";
+    std::cout << " 1. The violin \n";
+    std::cout << " 2. The trumpet \n";
+    std::cout << " 3. The piano \n";
+    std::cout << " 4. The drums \n";
     std::cin >> answer3;
 
     switch(answer3){
@@ -85,11 +88,11 @@ int main(){
     }
 
     //Question 4
-    std::cout << "4. Which road temps you the most?
-        \n  1. The wide, sunny grassy lane
-        \n  2. The narrow, dark, latern-lit alley
-        \n  3. The twisting, leaf-strewn path through woods
-        \n  4. The cobbled street lined with ancient buildings \n";
+    std::cout << "QUESTION 4: Which road temps you the most? \n";
+    std::cout << " 1. The wide, sunny grassy lane \n";
+    std::cout << " 2. The narrow, dark, latern-lit alley \n";
+    std::cout << " 3. The twisting, leaf-strewn path through woods \n";
+    std::cout << " 4. The cobbled street lined with ancient buildings \n";
     std::cin >> answer4;
 
     switch(answer4){
@@ -110,8 +113,33 @@ int main(){
             break;
     }
 
+    //Question 5
+    std::cout << "QUESTION 5: What is your favorite animal? \n";
+    std::cout << " 1. Hamster \n";
+    std::cout << " 2. Cat \n";
+    std::cout << " 3. Owl \n";
+    std::cout << " 4. Dog \n";
+    std::cin >> answer5;
 
+    switch(answer4){
+        case 1:
+            hufflepuff++;
+            break;
+        case 2:
+            slytherin++;
+            break;
+        case 3:
+            gryffindor++;
+            break;
+        case 4:
+            ravenclaw++;
+            break;
+        default:
+            std::cout << "Your input is invalid!";
+            break;
+    }
 
+    // Now add up the points for each house and see which one won!
     std::string house;
     int max = 0;
 
