@@ -8,5 +8,6 @@ In this repository you will find my solution to the Codecademy Projects. I will 
     -Python
     -C++
 
+It will focus more heavily on C++ / Java for the time being and may delve into React in the future. 
 
 
