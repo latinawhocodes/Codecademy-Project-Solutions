@@ -39,6 +39,25 @@ std::string needsWater(int days, bool isSucculent){
         return "Don't water the plant!";
     }
 }
+    //output: Time to water the plant.
+
+
+//Challenge 6
+bool isPalindrome(std::string text){
+
+    std::string reversedText = "";
+
+    for (int i = text.size() - 1; i >= 0; i--){
+        reversedText += text[i];
+    }
+
+    if (reversedText == text){
+        return true;
+    }
+    return false;
+}
+    //output: true, true, false
+
 
 int main(){
 
@@ -58,7 +77,9 @@ int main(){
 
     //Challenge 5
     std::cout << needsWater(10, false) << "\n";
+
+    //Challenge 6
+    std::cout << isPalindrome("madam") << "\n";
+    std::cout << isPalindrome("ada") << "\n";
+    std::cout << isPalindrome("lovelace") << "\n";
 }
-
-
-
